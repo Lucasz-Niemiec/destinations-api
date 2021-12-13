@@ -6,7 +6,7 @@ const connectDB = require("./config/dbConn");
 const path = require("path");
 const cors = require("cors");
 const corsOptions = require("./config/corsOptions");
-
+const PORT = process.env.PORT;
 //connect to mongo db
 connectDB();
 //cors
@@ -23,5 +23,5 @@ app.get("/image(.html)?", (req, res) => {
 //
 mongoose.connection.once("open", () => {
   console.log("conected to DB");
-  app.listen(3500, () => console.log("server running on port 3500"));
+  app.listen(PORT || 3500, () => console.log(`server running on port ${PORT}`));
 });
