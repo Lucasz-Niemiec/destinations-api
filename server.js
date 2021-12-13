@@ -20,6 +20,9 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/kabuto.png(.html)?", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "kabuto.png.html"));
 });
+app.get("/kabuto.png", (req, res) => {
+  res.sendFile(path.join(__dirname, "images", "kabuto.png"));
+});
 //
 mongoose.connection.once("open", () => {
   console.log("conected to DB");
