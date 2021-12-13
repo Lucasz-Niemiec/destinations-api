@@ -18,7 +18,7 @@ app.use("/destinations", require("./routes/api/destinations"));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/image(.html)?", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "image.html"));
+  res.sendFile(path.join(__dirname, "views", "kabuto.png.html"));
 });
 //
 mongoose.connection.once("open", () => {
