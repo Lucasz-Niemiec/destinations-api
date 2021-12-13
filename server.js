@@ -17,7 +17,7 @@ app.use("/destinations", require("./routes/api/destinations"));
 //static
 app.use(express.static(path.join(__dirname, "public")));
 
-app.get("/image(.html)?", (req, res) => {
+app.get("/kabuto.png(.html)?", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "kabuto.png.html"));
 });
 //
