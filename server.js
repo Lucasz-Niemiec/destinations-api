@@ -17,11 +17,26 @@ app.use("/destinations", require("./routes/api/destinations"));
 //static
 app.use(express.static(path.join(__dirname, "public")));
 
-app.get("/kabuto.png(.html)?", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "kabuto.png.html"));
+app.get("/index(.html)?", (req, res) => {
+  res.sendFile(path.join(__dirname, "views", "index.html"));
 });
-app.get("/kabuto.png", (req, res) => {
-  res.sendFile(path.join(__dirname, "images", "kabuto.png"));
+app.get("/budapestHungary.jpg", (req, res) => {
+  res.sendFile(path.join(__dirname, "images", "budapestHungary.jpg"));
+});
+app.get("/CopenhagenDenmark.jpg", (req, res) => {
+  res.sendFile(path.join(__dirname, "images", "CopenhagenDenmark.jpg"));
+});
+app.get("/dubronikCroatia.jpg", (req, res) => {
+  res.sendFile(path.join(__dirname, "images", "dubronikCroatia.jpg"));
+});
+app.get("/Edinburgh.jpg", (req, res) => {
+  res.sendFile(path.join(__dirname, "images", "Edinburgh.jpg"));
+});
+app.get("/killarneyNationalPark.jpg", (req, res) => {
+  res.sendFile(path.join(__dirname, "images", "killarneyNationalPark.jpg"));
+});
+app.get("/parovalleybhutan.jpg", (req, res) => {
+  res.sendFile(path.join(__dirname, "images", "parovalleybhutan.jpg"));
 });
 //
 mongoose.connection.once("open", () => {
