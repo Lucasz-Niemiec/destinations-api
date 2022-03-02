@@ -1,8 +1,4 @@
-const whitelist = [
-  "http://127.0.0.1:5500",
-  "http://localhost:3000",
-  "https://confident-jennings-d10152.netlify.app/popular",
-];
+const whitelist = ["https://confident-jennings-d10152.netlify.app/popular"];
 
 const corsOptions = {
   origin: (origin, callback) => {

@@ -6,7 +6,7 @@ const connectDB = require("./config/dbConn");
 const path = require("path");
 const cors = require("cors");
 const corsOptions = require("./config/corsOptions");
-const PORT = process.env.PORT || 3500;
+const PORT = process.env.PORT;
 //connect to mongo db
 connectDB();
 //cors
