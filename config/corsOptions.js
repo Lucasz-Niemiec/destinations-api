@@ -1,4 +1,7 @@
-const whitelist = ["https://confident-jennings-d10152.netlify.app/popular"];
+const whitelist = [
+  "https://confident-jennings-d10152.netlify.app/popular",
+  "https://confident-jennings-d10152.netlify.app",
+];
 
 const corsOptions = {
   origin: (origin, callback) => {
