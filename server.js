@@ -17,7 +17,7 @@ app.use("/destinations", require("./routes/api/destinations"));
 //static
 app.use(express.static(path.join(__dirname, "public")));
 
-app.get("/index(.html)?", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "index.html"));
 });
 app.get("/budapestHungary.jpg", (req, res) => {
